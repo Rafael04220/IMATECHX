@@ -1,0 +1,336 @@
+:root{
+    --font-color-type-1:white;
+    --font-color-type-2:#A0A0A8;
+    --bg-color:#0f0f14;
+    --btn-color: rgba(255, 255, 255, 0.08);
+    --navbar-bg: rgba(15, 15, 20, 0.699);
+    --bg-hover-type-1: rgba(255, 255, 255, 0.308);
+    --accent-color: #3B82F6;
+    --navbarSpace: 5em;
+    --padding-type-1: 1em 0 1em 0;
+    --padding-type2: 5em;
+    --gap-type-1: 2em;
+    --em-type-1:1.5em;
+    --font-size-mobile: 3.5em;
+    --font-size-desktop: 6em;
+    --margin-type-1: 0 auto;
+    --transition-type-1:transform 0.6s ease, opacity 0.3s ease-in-out ;
+    --transition-type-2: transform 0.8s ease, opacity 0.7s ease-in;
+    --transition-type-3: transform 0.6s ease, opacity 0.7s ease-in;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--bg-color);
+    color:var(--font-color-type-1);
+}
+
+
+/* navbar y sus listas */
+
+.navbar{
+    position:fixed;
+    display:flex;
+    top:0;
+    left:0;
+    height: 100%;
+    transform: translateX(-100%);
+    gap:var(--gap-type-1);
+    width:100%;
+    opacity: 0;
+    transition: var(--transition-type-1);
+    background: var(--navbar-bg);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+.navbar.open{
+    transform: translateX(0);
+    opacity: 1;
+}
+.caja-listas{
+    display:flex;
+    height: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    width: 95vw;
+    gap:var(--gap-type-1);
+    align-items: center;
+    padding-top:var(--padding-type2);
+    margin-top: 5em;
+    flex-direction: column;
+}
+.menu-btn{
+    font-size: var(--em-type-1);
+    width: var(--em-type-1);
+    height: var(--em-type-1);
+    z-index: 999;
+    background-color:var(--btn-color);
+    border-radius: 5px;
+    border:0;
+    cursor: pointer;
+}
+.btn-close{
+    display:flex;
+    align-items: center;
+    position:fixed;
+    right:0;
+    top:0;
+    justify-content: center;
+    width: 3em;
+    height: 3em;
+    font-size: 1.2em;
+    z-index: 999;
+    background-color:var(--btn-color);
+    border-radius: 5px;
+    border:0;
+    cursor: pointer;
+
+}
+.logo-btn{
+    display:flex;
+    position: sticky;
+    z-index: 1000;
+    left:0;
+    top:0;
+    gap:1.5em;
+    margin:0 auto;
+    padding: 2em;
+    background-color: var(--btn-color);
+    box-shadow: 0px 1px 22px 0.1px rgba(78, 77, 77, 0.200);
+    width: 100%;
+}
+.listas-nav{
+    display:flex;
+    justify-content: start;
+    list-style: none;
+    width: 100%;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.listas-nav:hover{
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.164);
+}
+.listas-nav:active{
+    background-color: var(--bg-color);
+}
+.anclaje{
+    text-decoration: none;
+    padding:var(--em-type-1);
+    color:var(--font-color-type-1);
+}
+.list-style:hover{
+    opacity: 0.5;
+    transition: var(--transition-type-1);
+    transform: scale(1.05);
+}
+
+/* texto y logo  (animaciones) */
+
+.main-central{
+    transform: translateY(15%);
+    transition: var(--transition-type-2);
+    opacity: 0;
+    padding-bottom: 3em;
+}
+.caja-central-txt{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+}
+.texto-logo{
+    text-align: center;
+    font-weight: 700;
+    font-size: var(--font-size-mobile);
+    transform: translateY(2em);
+    letter-spacing: 0.08em;
+    
+}
+.s-x{
+    color:var(--accent-color);
+}
+.s-tech{
+    color:var(--font-color-type-2);
+}
+.performance{
+    color:gray;
+    text-align: center;
+    font-size: 1.3em;
+    font-style: italic;
+}
+.text-blanco{
+    color:white;
+}
+.animacion-entry{
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+}
+.pd-pc{
+    width: 98%;
+}
+.texto-descripcion{
+    font-size: 1.2em;
+    padding-bottom: 1em;
+    text-align: center;
+    margin:0 auto;
+    width: 100%;
+    color:var(--font-color-type-2);
+    padding-top: 1.5em;
+
+}
+.texto-grande{
+    padding-bottom: 1em;
+}
+.text-centrado{
+    text-align: center;
+    transition:var(--transition-type-2);
+}
+.text-izq{
+    transform: translateX(-50%);
+    transition:var(--transition-type-2);
+    text-align: center;
+}
+.precio{
+    color:var(--font-color-type-2);
+}
+/* contactos y links */
+
+.inf-contactos{
+    display: flex;
+    flex-direction: column;
+    gap:2em;
+    margin-top: var(--navbarSpace);
+    border-top: 1px solid rgba(255,255,255,0.05);
+
+}
+.text-izq.animacion-entry{
+    transform:translateX(0);
+}
+.contactos{
+    display:flex;
+    justify-content: center;
+    margin:2em 0;
+    padding:0.8em;
+    border-radius: 10px;
+    width: 100%;
+    background:var(--accent-color);
+    color:white;
+    text-decoration: none;
+    cursor:pointer;
+    align-items: center;
+    font-weight: 600;
+    transition:var(--transition-type-1);
+
+}
+
+.contactos:hover{
+    opacity: 0.8;
+}
+.contactos:active{
+    background-color:var(--bg-hover-type-1);
+    opacity: 0.5;
+}
+
+/* aca van los stylos de cualquier lista */
+
+.list-style{
+    list-style: none;
+    text-align: center;
+}
+
+/* info y imagenes (todas) */
+
+.list-of-pc{
+    display: grid;
+    margin-top: var(--navbarSpace);
+    grid-template-columns: repeat(1,1fr);
+    gap:2em;
+}
+.ft-of-pc{
+    display:block;
+    margin: 0 auto;
+    max-width: 250px;
+    width: clamp(150px, calc(250px + 2%), 100%);
+    height: auto;
+}
+
+
+/* el footer va aca */
+
+.footer{
+    background-color: var(--btn-color);
+}
+.ubi{
+    display:flex;
+    justify-content: center;
+}
+
+
+ @media (min-width:1024px){
+    .navbar{
+        position:fixed;
+        width: 100%;
+        height: auto;
+        transform:translateX(0);
+        opacity: 1;
+    }
+    .caja-listas{
+        width: auto;
+        height: auto;
+        justify-content: center;
+        margin:0 auto;
+        width: 100%;
+        margin-top: 0;
+        padding:2em;
+        flex-direction: row;
+    }
+    .logo-btn{
+        display:none;
+        
+    }
+    .menu-btn{
+        display:none;
+    }
+    .btn-close{
+        display:none;
+    }
+    .texto-logo{
+        font-size: var(--font-size-desktop);
+        letter-spacing: 0.1em;
+        font-weight: 800;
+    }
+    .garantia{
+        margin-bottom: var(--navbarSpace);
+    }
+    /* listas y imagenes */
+    .list-of-pc{
+        padding:5em;
+        grid-template-columns: repeat(3,1fr);
+        width: 80%;
+        margin:0 auto;
+    }
+    .contactos{
+        width: 30%;
+        margin:0 auto;
+    }
+    .texto-descripcion{
+        font-size: 1.5em;
+        width: 100%;
+    }
+    .text-izq{
+        text-align: left;
+        padding-left: 5em;
+    }
+    .texto-grande{
+        font-size: 1.11em;
+        padding-bottom: 1em;
+
+    }
+}
