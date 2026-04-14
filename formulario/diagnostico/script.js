@@ -3,20 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let btnSideBar = document.getElementById("sidebar-btn");
     btnSideBar.addEventListener("click", toggleSidebar);
     let sideBar = document.getElementById("sidebar");
-    let noScrollBd = document.body;
 
 
     function toggleSidebar() {
         if (sideBar) {
             sideBar.classList.toggle("open");
-            noScrollBd.classList.toggle(".no-scroll");
         }
     }
 
     document.querySelectorAll(".close-navbar").forEach(link => {
         link.addEventListener("click", () => {
             sideBar.classList.remove("open");
-           noScrollBd.classList.remove("no-scroll");
         });
     });
 
@@ -36,14 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+
     textAnimations.forEach(el => observador.observe(el));
 
 
-
-
-
-    /* seleccion de moodo */
-
+    /* botton seleccionado */
     const btnActive = document.querySelectorAll(".btn-effect");
 
     function  toggleActive(){
@@ -59,13 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleActive();
 
 
+    const listChanger = document.getElementById("btn-select-1");
 
-
-})
-
-
-
-
-
-
-
+        listChanger.addEventListener("click", () =>{
+            
+            const fixlanding = document.getElementById("fixlanding");
+            fixlanding.classList.add("openfixlanding");
+        });
+});

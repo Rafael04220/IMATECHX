@@ -1,0 +1,6 @@
+                        <li class="list-style links"><a class="anclaje" href="" target="_blank"><img class="socialmedia"
+                                    src="logo-de-facebook.png" alt="logo-test"></a></li>
+                        <li class="list-style links"><a class="anclaje" href="" target="_blank"><img class="socialmedia"
+                                    src="logotipo-de-instagram.png" alt="logo-test"></a></li>
+                        <li class="list-style links"><a class="anclaje" href="" target="_blank"><img class="socialmedia"
+                                    src="discord-icon-43736.png" alt="logo-test"></a></li>
